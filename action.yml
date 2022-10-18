@@ -4,4 +4,11 @@ author: 'Peter Guest'
 runs:
   using: 'node12'
   main: 'dist/index.js'
+inputs:
+  input-string:
+    description: "The string to be searched within."
+    required: true
+  delimiter:
+    description: "The delimited characters to find the text between."
+    required: true
 
