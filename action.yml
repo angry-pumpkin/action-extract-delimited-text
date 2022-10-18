@@ -1,5 +1,6 @@
 name: 'Extract Delimetered Value'
 description: 'Extracts which unit tests to be run based on a PR request body.'
+author: 'Peter Guest'
 runs:
   using: 'node12'
   main: 'dist/index.js'
