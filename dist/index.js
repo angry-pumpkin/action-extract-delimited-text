@@ -9695,6 +9695,16 @@ const main = async () => {
 
         const delimiter = core.getInput('delimiter');
         console.log(`delimiter: ${delimiter}`);
+
+        let firstIndex = inputString.indexOf(delimiter);
+        console.log(`firstIndex: ${firstIndex}`);
+
+        let lastIndex = inputString.lastIndexOf(delimiter);
+        console.log(`lastIndex: ${lastIndex}`);      
+
+        let extracted = inputString.substring(firstIndex, lastIndex);
+        console.log(`extracted: ${extracted}`);      
+
     }
     catch (error) {
         core.setFailed(error.message);
