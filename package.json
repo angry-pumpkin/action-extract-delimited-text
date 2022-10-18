@@ -1,0 +1,26 @@
+{
+  "name": "salesforce-action-pr-unit-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angry-pumpkin/salesforce-action-pr-unit-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angry-pumpkin/salesforce-action-pr-unit-tests/issues"
+  },
+  "homepage": "https://github.com/angry-pumpkin/salesforce-action-pr-unit-tests#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@vercel/ncc": "^0.34.0"
+  }
+}

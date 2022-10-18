@@ -1,0 +1,15 @@
+name: 'Extract Delimetered Value'
+description: 'Extracts which unit tests to be run based on a PR request body.'
+
+inputs:
+  input-value:
+    description: 'The input string to be searched where we will extract the delimited value from.'
+  delimiter:
+    description: 'The text pattern to find the values between.'
+
+outputs:
+  tests: 
+      description: ''
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
