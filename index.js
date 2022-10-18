@@ -4,7 +4,7 @@ const github = require('@actions/github');
 const main = async () => {
 
     try {
-        const inputValue = core.getInput('input-value');
+        const inputValue = core.getInput('input_string');
         console.log(`inputValue: ${inputValue}`);
 
         const delimiter = core.getInput('delimiter');
