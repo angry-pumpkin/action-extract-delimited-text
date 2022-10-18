@@ -9690,11 +9690,11 @@ const github = __nccwpck_require__(5438);
 const main = async () => {
 
     try {
-        const inputValue = core.getInput('input_string');
-        console.log(`inputValue: ${inputValue}`);
+        //const inputValue = core.getInput('input_string');
+        //console.log(`inputValue: ${inputValue}`);
 
-        const delimiter = core.getInput('delimiter');
-        console.log(`delimiter: ${delimiter}`);
+        //const delimiter = core.getInput('delimiter');
+        //console.log(`delimiter: ${delimiter}`);
     }
     catch (error) {
         core.setFailed(error.message);

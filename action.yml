@@ -3,9 +3,4 @@ description: 'Extracts which unit tests to be run based on a PR request body.'
 runs:
   using: 'node12'
   main: 'dist/index.js'
-inputs:
-  input_string:
-    description: 'The input string to be searched where we will extract the delimited value from.'
-  delimiter:
-    description: 'The text pattern to find the values between.'
 
