@@ -2,7 +2,10 @@ const core = require('@actions/core');
 
 const main = async () => {
 
+    let result;
+
     try {
+        
         const inputString = core.getInput('input-string');
         const delimiter = core.getInput('delimiter');
 
@@ -12,8 +15,9 @@ const main = async () => {
         let lastIndex = inputString.lastIndexOf(delimiter);          
         console.log('#### lastIndex: '+lastIndex);
 
-        let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
-        console.log('#### result: '+result);
+        if(firstIndex >= 0 && firstIndex != lastIndex) {
+            result = inputString.substring(firstIndex+delimiter.length, lastIndex);  
+        }
 
         core.setOutput("is-matched", result ? true : false);
         core.setOutput("result", result);
