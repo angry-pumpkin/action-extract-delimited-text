@@ -9,10 +9,7 @@ const main = async () => {
         let firstIndex = inputString.indexOf(delimiter);
         console.log('#### firstIndex: '+firstIndex);
 
-        let nextStartPosition = firstIndex + delimiter.length;
-        console.log('#### nextStartPosition: '+nextStartPosition);
-
-        let lastIndex = inputString.lastIndexOf(delimiter, nextStartPosition);          
+        let lastIndex = inputString.lastIndexOf(delimiter);          
         console.log('#### lastIndex: '+lastIndex);
 
         let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
