@@ -2828,7 +2828,7 @@ const main = async () => {
         let firstIndex = inputString.indexOf(delimiter);
         console.log('### firstIndex: '+firstIndex);
 
-        let lastIndex = inputString.lastIndexOf(delimiter, firstIndex);   
+        let lastIndex = inputString.lastIndexOf(delimiter, firstIndex+delimiter.length);   
         console.log('### lastIndex: '+lastIndex);
 
         let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
