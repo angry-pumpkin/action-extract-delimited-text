@@ -2826,13 +2826,14 @@ const main = async () => {
         const delimiter = core.getInput('delimiter');
 
         let firstIndex = inputString.indexOf(delimiter);
-        console.log('### firstIndex: '+firstIndex);
+        console.log('#### firstIndex: '+firstIndex);
 
-        let lastIndex = inputString.lastIndexOf(delimiter, firstIndex+50);   
-        console.log('### lastIndex: '+lastIndex);
+        let lastIndex = inputString.lastIndexOf(delimiter, firstIndex+delimiter.length);   
+        console.log('#### calculated: '+firstIndex+delimiter.length);
+        console.log('#### lastIndex: '+lastIndex);
 
         let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
-        console.log('### result: '+result);
+        console.log('#### result: '+result);
 
         core.setOutput("is-matched", result ? true : false);
         core.setOutput("result", result);
