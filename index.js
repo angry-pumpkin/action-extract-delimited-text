@@ -3,6 +3,7 @@ const core = require('@actions/core');
 const main = async () => {
 
     let result;
+    let isMatched = false;
 
     try {
         
@@ -17,9 +18,10 @@ const main = async () => {
 
         if(firstIndex >= 0 && firstIndex != lastIndex) {
             result = inputString.substring(firstIndex+delimiter.length, lastIndex);  
+            isMatched = true;
         }
 
-        core.setOutput("is-matched", result ? true : false);
+        core.setOutput("is-matched", isMatched);
         core.setOutput("result", result);
     }
     catch (error) {
