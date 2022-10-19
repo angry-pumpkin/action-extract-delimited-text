@@ -5,23 +5,14 @@ const main = async () => {
 
     try {
         const inputString = core.getInput('input-string');
-        console.log(`inputValue: ${inputString}`);
-
         const delimiter = core.getInput('delimiter');
-        console.log(`delimiter: ${delimiter}`);
 
         let firstIndex = inputString.indexOf(delimiter);
-        console.log(`firstIndex: ${firstIndex}`);
+        let lastIndex = inputString.lastIndexOf(delimiter);   
+        let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
 
-        let lastIndex = inputString.lastIndexOf(delimiter);
-        console.log(`lastIndex: ${lastIndex}`);      
-
-        let result = inputString.substring(firstIndex+delimiter.length, lastIndex);
-        console.log(`result: ${result}`);      
-
-        core.setOutput("is-matched", true);
+        core.setOutput("is-matched", result ? true : false);
         core.setOutput("result", result);
-
     }
     catch (error) {
         core.setFailed(error.message);
