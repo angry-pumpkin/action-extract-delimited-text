@@ -2839,7 +2839,7 @@ const main = async () => {
             isMatched = true;
         }
 
-        if(failNoMatch == 'true') {
+        if(failNoMatch == 'true' && !isMatched) {
             core.setFailed('No Match Found');
         }       
 
