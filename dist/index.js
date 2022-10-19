@@ -9703,7 +9703,7 @@ const main = async () => {
         console.log(`lastIndex: ${lastIndex}`);      
 
         let result = inputString.substring(firstIndex, lastIndex);
-        console.log(`extracted: ${extracted}`);      
+        console.log(`result: ${result}`);      
 
         core.setOutput("is-matched", true);
         core.setOutput("result", result);
