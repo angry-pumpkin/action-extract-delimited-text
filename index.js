@@ -12,10 +12,8 @@ const main = async () => {
         const failNoMatch = core.getInput('fail-no-match');
 
         let firstIndex = inputString.indexOf(delimiter);
-        console.log('#### firstIndex: '+firstIndex);
 
         let lastIndex = inputString.lastIndexOf(delimiter);          
-        console.log('#### lastIndex: '+lastIndex);
 
         if(firstIndex >= 0 && firstIndex != lastIndex) {
             result = inputString.substring(firstIndex+delimiter.length, lastIndex);  
@@ -24,11 +22,13 @@ const main = async () => {
 
         if(failNoMatch == 'true') {
             core.setFailed('No Match Found');
-            exit;
-        }
+        }       
 
         core.setOutput("is-matched", isMatched);
+        console.log('is-matched: '+isMatched);
+
         core.setOutput("result", result);
+        console.log('result: '+result);
     }
     catch (error) {
         core.setFailed('No Match Found');
