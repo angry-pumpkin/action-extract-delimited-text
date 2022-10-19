@@ -9693,12 +9693,14 @@ const main = async () => {
         const inputString = core.getInput('input-string');
         const delimiter = core.getInput('delimiter');
 
+        let firstIndex = inputString.indexOf(delimiter);
+        console.log('### firstIndex'+firstIndex);
 
-        let result = inputString.split(delimiter);
+        let lastIndex = inputString.lastIndexOf(delimiter);   
+        console.log('### lastIndex'+lastIndex);
 
-        // let firstIndex = inputString.indexOf(delimiter);
-        // let lastIndex = inputString.lastIndexOf(delimiter);           
-        // let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
+        let result = inputString.substring(firstIndex+delimiter.length, lastIndex);    
+        console.log('### result'+result);
 
         core.setOutput("is-matched", result ? true : false);
         core.setOutput("result", result);
