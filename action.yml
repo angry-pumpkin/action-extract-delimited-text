@@ -11,4 +11,9 @@ inputs:
   delimiter:
     description: "The delimited characters to find the text between."
     required: true
+outputs:
+  is-matched:
+    description: 'Indicate if we found the delimiters and got a value.'
+  result:
+    description: 'The extracted text.'
 

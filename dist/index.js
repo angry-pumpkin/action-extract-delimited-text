@@ -9702,8 +9702,11 @@ const main = async () => {
         let lastIndex = inputString.lastIndexOf(delimiter);
         console.log(`lastIndex: ${lastIndex}`);      
 
-        let extracted = inputString.substring(firstIndex, lastIndex);
+        let result = inputString.substring(firstIndex, lastIndex);
         console.log(`extracted: ${extracted}`);      
+
+        core.setOutput("is-matched", true);
+        core.setOutput("result", result);
 
     }
     catch (error) {
