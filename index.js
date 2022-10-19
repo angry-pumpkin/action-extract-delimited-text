@@ -21,7 +21,7 @@ const main = async () => {
         }
 
         if(failNoMatch == 'true' && !isMatched) {
-            core.setFailed('No Match Found');
+            core.setFailed('No Text Match Found');
         }       
 
         core.setOutput("is-matched", isMatched);
