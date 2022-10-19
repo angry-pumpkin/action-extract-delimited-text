@@ -16,7 +16,7 @@ const main = async () => {
         let lastIndex = inputString.lastIndexOf(delimiter);
         console.log(`lastIndex: ${lastIndex}`);      
 
-        let result = inputString.substring(firstIndex, lastIndex);
+        let result = inputString.substring(firstIndex+delimiter.length, lastIndex);
         console.log(`result: ${result}`);      
 
         core.setOutput("is-matched", true);
