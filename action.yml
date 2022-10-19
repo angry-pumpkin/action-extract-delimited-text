@@ -11,6 +11,9 @@ inputs:
   delimiter:
     description: "The delimited characters to find the text between."
     required: true
+  fail-no-match:
+    description: "Indicates if we should exit wihtout code 0. Default = false"
+    default: "false"
 outputs:
   is-matched:
     description: 'Indicate if we found the delimiters and got a value.'

@@ -2828,6 +2828,7 @@ const main = async () => {
         
         const inputString = core.getInput('input-string');
         const delimiter = core.getInput('delimiter');
+        const failNoMatch = core.getInput('fail-no-match');
 
         let firstIndex = inputString.indexOf(delimiter);
         console.log('#### firstIndex: '+firstIndex);
@@ -2840,11 +2841,16 @@ const main = async () => {
             isMatched = true;
         }
 
+        if(failNoMatch == 'true') {
+            core.setFailed('No Match Found');
+            exit;
+        }
+
         core.setOutput("is-matched", isMatched);
         core.setOutput("result", result);
     }
     catch (error) {
-        core.setFailed(error.message);
+        core.setFailed('No Match Found');
     }
 }
 
